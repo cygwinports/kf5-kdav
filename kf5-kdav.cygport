@@ -1,0 +1,25 @@
+inherit kf5
+
+NAME="kf5-kdav"
+VERSION=17.12.3
+RELEASE=1
+CATEGORY="Libs"
+SUMMARY="KDE PIM DAV protocol library"
+DESCRIPTION="This is an DAV protocol implemention with KJobs. Calendars and
+todos are supported, using either GroupDAV or CalDAV, and contacts are
+supported using GroupDAV or CardDAV."
+
+PKG_NAMES="libKPimKDAV5 libKPimKDAV-devel"
+libKPimKDAV5_CONTENTS="
+	etc/xdg/kdav.categories
+	usr/bin/cygKPimKDAV-5.dll
+	usr/share/doc/${NAME}
+"
+libKPimKDAV_devel_REQUIRES="libKF5CoreAddons-devel"
+libKPimKDAV_devel_CONTENTS="
+	usr/include/KPim/*/
+	usr/include/KPim/kpimkdav_version.h
+	usr/lib/cmake/KPimKDAV/
+	usr/lib/libKPimKDAV.dll.a
+	usr/lib/qt5/mkspecs/modules/qt_kdav.pri
+"
